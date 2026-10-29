@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ramayan Family Restaurant · Yavatmal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Inter+Tight:wght@500;600&family=Noto+Sans+Devanagari:wght@500&family=Noto+Serif+Devanagari:wght@700&display=swap">
+<style>
+:root{--paper:#EDEBE6;--sheet:#F4F2ED;--ink:#141414;--muted:#6D6A63;--cobalt:#1F3FB0;--fill:#1F3FB0;--rule:rgba(20,20,20,.9);--ease:cubic-bezier(.2,.8,.2,1);--H:min(46vh,31vw);color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#171614;--sheet:#1e1c19;--ink:#ECE9E2;--muted:#9a968d;--cobalt:#8fa2ff;--rule:rgba(236,233,226,.8);color-scheme:dark}}
+@media (max-width:700px){:root{--H:min(60vw,40svh)}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font:500 12px "Inter Tight","Noto Sans Devanagari",system-ui,sans-serif;-webkit-font-smoothing:antialiased;user-select:none}
+@media (pointer:fine){html,body,button,a{cursor:none}}
+button{font:inherit;color:inherit}
+.lbl{font:600 10.5px/1 "Inter Tight","Noto Sans Devanagari",sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.box{display:inline-flex;align-items:center;height:21px;padding:0 8px;border:1px solid var(--rule);color:var(--ink);text-decoration:none;background:none;white-space:nowrap}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+#grain{position:fixed;inset:0;z-index:40;pointer-events:none;mix-blend-mode:multiply;opacity:.55;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45 0 0 0 0 .42 0 0 0 0 .38 0 0 0 .22 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.bar{position:fixed;inset:0 0 auto 0;height:calc(84px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 32px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;z-index:41}
+.bar>:last-child{justify-self:end}
+.logo{display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--cobalt)}
+.logo b{font:700 22px "Noto Serif Devanagari",serif;letter-spacing:.04em}
+.logo i{font:600 9px "Inter Tight",sans-serif;letter-spacing:.34em;padding-left:.34em;font-style:normal}
+.tabs{position:fixed;left:50%;top:calc(50% - var(--H)/2 - 86px);transform:translateX(-50%);display:flex;padding-left:1px;z-index:41}
+.tabs button{position:relative;z-index:1;height:23px;padding:0 11px;margin-left:-1px;border:1px solid var(--rule);background:none;white-space:nowrap;transition:color .45s var(--ease)}
+.tabs button.on{color:#fff}
+.ind{position:absolute;left:0;top:0;height:23px;width:0;background:var(--fill);transition:width .6s var(--ease),transform .6s var(--ease)}
+.shelf{position:fixed;left:0;right:0;top:calc(50% - var(--H)/2 - 40px);height:calc(var(--H) + 80px);perspective:2200px;perspective-origin:50% 50%;touch-action:pan-y;z-index:2}
+.stage{--ws:calc(var(--H)*.169);--d:calc(var(--H)*.5267);position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
+.tape{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.f{position:absolute;top:calc(var(--H)/-2);height:var(--H);backface-visibility:hidden;border-radius:2px;overflow:hidden;background:var(--b);color:#141414}
+.f::after{content:"";position:absolute;inset:0;background:#000;pointer-events:none}
+.sp{width:var(--ws);left:calc(var(--ws)/-2);transform:translateZ(calc(var(--d)/2));display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:calc(var(--H)*.035) 0;border:1px solid rgba(20,20,20,.25)}
+.sp::after{opacity:var(--ss,0)}
+.cv{width:var(--d);left:calc(var(--d)/-2);transform:rotateY(90deg) translateZ(calc(var(--ws)/2));box-shadow:0 30px 60px -28px rgba(20,16,10,.55);overflow:visible}
+.cv::after{opacity:var(--sc,.5)}
+.dot{width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--b) 0 18%,var(--a) 19% 40%,var(--b) 41% 52%,var(--a) 53%)}
+.vt{flex:1;display:flex;align-items:center;writing-mode:vertical-rl;font:400 calc(var(--H)*.052)/1 Newsreader,Georgia,serif;padding:calc(var(--H)*.03) 0;white-space:nowrap}
+.sp em{font:600 calc(var(--H)*.014)/1 "Inter Tight",sans-serif;letter-spacing:.2em;writing-mode:vertical-rl;font-style:normal;margin-bottom:calc(var(--H)*.02)}
+.tag{border:1px solid currentColor;font:600 calc(var(--H)*.0125)/1 "Inter Tight",sans-serif;padding:.35em .5em;letter-spacing:.1em;color:var(--a)}
+.cvin{position:relative;display:flex;flex-direction:column;padding:calc(var(--H)*.04);overflow:hidden;background:var(--b);color:#141414}
+.cvin small{font:600 calc(var(--H)*.014)/1 "Inter Tight",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--a)}
+.cvin h3{margin:calc(var(--H)*.02) 0 0;font:400 calc(var(--H)*.085)/.95 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.plate{flex:1;margin:calc(var(--H)*.03) 0;background:radial-gradient(circle at 50% 52%,var(--b) 0 10%,var(--a) 11% 26%,var(--b) 27% 33%,var(--a) 34% 58%,transparent 59%)}
+.cvin .tag{align-self:flex-end}
+.play{position:fixed;left:calc(50% - var(--H)*.2633 - 27px);top:calc(50% + var(--H)*.36 - 21px);width:42px;height:42px;padding:0;border:1px solid var(--cobalt);border-radius:50%;color:var(--cobalt);background:color-mix(in srgb,var(--paper) 75%,transparent);display:grid;place-items:center;transform:scale(0);z-index:3}
+.play svg{margin-left:2px}
+.cap{position:fixed;left:50%;top:calc(50% + var(--H)/2 + 30px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:9px;pointer-events:none;z-index:2}
+.m{width:min(92vw,760px);overflow:hidden;display:grid;text-align:center;padding-bottom:.12em}
+.m span{grid-area:1/1}
+.t{font:400 31px/1.12 Newsreader,Georgia,serif;letter-spacing:-.01em}
+.s{color:var(--cobalt)}
+.y{font:500 11px/1.4 "Inter Tight",sans-serif;letter-spacing:.08em}
+.arr{position:fixed;top:calc(50% + var(--H)/2 + 40px);width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;z-index:41}
+.arr.l{left:20px}.arr.r{right:20px}
+.foot{position:fixed;left:32px;right:32px;bottom:calc(26px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:12px;z-index:41}
+.foot a{color:var(--ink);text-decoration:none}
+#detail{position:fixed;inset:0;z-index:60;background:var(--sheet);visibility:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;padding:96px 7vw 60px}
+#detail .close{position:absolute;left:32px;top:calc(30px + env(safe-area-inset-top,0px))}
+.big{--H:min(58vh,86vw);width:calc(var(--H)*.5267);height:var(--H);justify-self:end;box-shadow:0 30px 60px -28px rgba(20,16,10,.55);transform:rotate(-2deg)}
+.ln{overflow:hidden;padding-bottom:.12em}
+.ln>*{display:block}
+.dt h2{font:400 clamp(38px,5vw,72px)/1 Newsreader,Georgia,serif;margin:14px 0;letter-spacing:-.01em}
+.dt .syn{font:400 20px/1.45 Newsreader,Georgia,serif;max-width:34ch;margin:16px 0 22px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.cta{height:38px;padding:0 16px;background:var(--fill);border-color:var(--fill);color:#fff}
+.cur{position:fixed;left:-29px;top:-29px;width:58px;height:58px;pointer-events:none;z-index:100;display:none;transform:translate3d(-99px,-99px,0)}
+@media (pointer:fine){.cur{display:block}}
+.ring{position:absolute;inset:0;border:1.5px solid var(--ink);border-radius:50%;transition:transform .5s var(--ease),background .4s var(--ease),border-color .4s var(--ease)}
+.dotc{position:absolute;left:26px;top:26px;width:6px;height:6px;border-radius:50%;background:var(--ink);transition:transform .4s var(--ease)}
+.cl{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;font:600 10px/1.25 "Inter Tight","Noto Sans Devanagari",sans-serif;letter-spacing:.1em;transform:scale(0);transition:transform .45s var(--ease)}
+.cur.spine .ring{transform:scale(.72)}
+.cur.btn .ring{transform:scale(.55)}.cur.btn .dotc{transform:scale(0)}
+.cur.open .ring{transform:scale(1.75);background:var(--fill);border-color:var(--fill)}.cur.open .dotc{transform:scale(0)}.cur.open .cl{transform:scale(1)}
+@media (max-width:760px){
+.bar{padding-left:16px;padding-right:16px}.rt{display:none}.foot{left:16px;right:16px;flex-direction:column;gap:6px}.arr.l{left:4px}.arr.r{right:4px}
+#detail{grid-template-columns:1fr;gap:20px;align-content:start;padding:84px 24px 40px;overflow:auto}
+.big{--H:min(34vh,62vw);justify-self:start}
+.t{font-size:26px}}
+@media (prefers-reduced-motion:reduce){.ind,.ring{transition:none}}
+</style></head><body>
+<div id="grain"></div>
+<header class="bar"><a class="box lbl" href="https://wa.me/919404401111?text=Hello%20Ramayan%20Family%20Restaurant" target="_blank" rel="noopener">Order / ऑर्डर</a><div class="logo"><b>रामायण</b><i>RAMAYAN FAMILY RESTAURANT</i></div><span class="lbl rt">Yavatmal · ₹200–400 per person</span></header>
+<nav class="tabs" aria-label="Menu sections"><i class="ind"></i></nav>
+<main class="shelf"><div class="stage"></div></main>
+<button class="play" aria-label="Open dish"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 0 12 6 2 12Z" fill="currentColor"/></svg></button>
+<div class="cap"><div class="m t"></div><div class="m s lbl"></div><div class="m y"></div></div>
+<button class="arr l" aria-label="Previous dish"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 1 1 5l4 4M1 5h16"/></svg></button>
+<button class="arr r" aria-label="Next dish"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="m13 1 4 4-4 4M17 5H1"/></svg></button>
+<footer class="foot lbl"><span>© Ramayan Family Restaurant · Datta Chowk Rd, Yavatmal</span><span><a href="https://www.google.com/maps/search/?api=1&query=Ramayan+Family+Restaurant+Yavatmal" target="_blank" rel="noopener">Directions</a> / <a href="https://wa.me/919404401111" target="_blank" rel="noopener">WhatsApp</a></span></footer>
+<div id="detail"></div>
+<div class="cur"><div class="ring"></div><i class="dotc"></i><div class="cl">OPEN<br>खोलें</div></div>
+<script>
+const CR='#1F3FB0',GR='#1F5A3A',VR='#C2391C';
+const F=[
+{t:'Chicken Biryani',r:'MURGH BIRYANI',k:'मुर्ग बिरयानी',c:'Biryani',v:0,a:CR,b:'#EFE3C8',s:'Fragrant basmati rice layered with spiced chicken and slow-cooked on dum.'},
+{t:'Veg Biryani',r:'SABZI BIRYANI',k:'सब्ज़ी बिरयानी',c:'Biryani',v:1,a:GR,b:'#E9E4D4',s:'Basmati rice and seasonal vegetables steamed together with whole spices.'},
+{t:'Mutton Handi',r:'MUTTON HANDI',k:'मटन हांडी',c:'Curries',v:0,a:VR,b:'#F0DFC4',s:'Tender mutton simmered slowly in a sealed handi with onion and whole spices.'},
+{t:'Paneer Butter Masala',r:'PANEER MAKHANI',k:'पनीर मखनी',c:'Curries',v:1,a:VR,b:'#EFE3C8',s:'Soft paneer in a smooth tomato and butter gravy.'},
+{t:'Dal Tadka',r:'DAL TADKA',k:'दाल तड़का',c:'Curries',v:1,a:CR,b:'#E9E4D4',s:'Yellow dal finished with a sizzling tempering of garlic, cumin and red chilli.'},
+{t:'Tandoori Platter',r:'TANDOORI PLATTER',k:'तंदूरी प्लेटर',c:'Starters',v:0,a:VR,b:'#F0DFC4',s:'Chicken grilled in the tandoor, served with mint chutney and onion rings.'},
+{t:'Paneer Tikka',r:'PANEER TIKKA',k:'पनीर टिक्का',c:'Starters',v:1,a:GR,b:'#EFE3C8',s:'Marinated paneer and peppers, charred in the tandoor.'},
+{t:'Gulab Jamun',r:'GULAB JAMUN',k:'गुलाब जामुन',c:'Sweets',v:1,a:CR,b:'#E9E4D4',s:'Soft milk dumplings soaked in warm cardamom syrup.'}];
+const CATS=[['Biryani','बिरयानी'],['Curries','करी'],['Starters','स्टार्टर'],['Sweets','मिठाई']];
+const WA='https://wa.me/919404401111?text=',MAP='https://www.google.com/maps/search/?api=1&query=Ramayan+Family+Restaurant+Yavatmal';
+const EASE='cubic-bezier(.2,.8,.2,1)',N=F.length,M=N*3,$=q=>document.querySelector(q);
+const stage=$('.stage'),tabs=$('.tabs'),ind=$('.ind'),play=$('.play'),cur=$('.cur'),D=$('#detail');
+const tag=f=>`<span class="tag">${f.v?'VEG':'NON-VEG'}</span>`;
+const vars=f=>`--a:${f.a};--b:${f.b}`;
+const cover=f=>`<small>A Ramayan special</small><h3>${f.t}</h3><div class="plate"${f.img?` style="background:url(${f.img}) center/cover"`:''}></div>${tag(f)}`;
+const tapes=[],rr=new Array(M).fill(0),lift=new Array(M).fill(0);
+for(let v=0;v<M;v++){const f=F[v%N],el=document.createElement('div');el.className='tape';
+ el.innerHTML=`<div class="f sp" style="${vars(f)}"><i class="dot"></i><b class="vt">${f.t}</b><em>RAMAYAN</em>${tag(f)}</div><div class="f cv cvin" style="${vars(f)}">${cover(f)}</div>`;
+ el.onpointerenter=()=>hov=v;el.onpointerleave=()=>{if(hov===v)hov=-1};
+ el.onclick=()=>{if(dragged)return;const r=((v-T+M/2)%M+M)%M-M/2;if(Math.abs(r)>.5)T+=Math.round(r);else openD()};
+ stage.appendChild(el);tapes.push(el)}
+const tb=CATS.map(([e,h])=>{const b=document.createElement('button');b.className='lbl';b.textContent=e+' / '+h;
+ b.onclick=()=>{const i=F.findIndex(x=>x.c===e);T+=((i-T+N/2)%N+N)%N-N/2};tabs.appendChild(b);return b});
+function updInd(){const b=tb[CATS.findIndex(c=>c[0]===F[act].c)];tb.forEach(x=>x.classList.toggle('on',x===b));ind.style.width=b.offsetWidth+'px';ind.style.transform=`translateX(${b.offsetLeft}px)`}
+function swap(el,html,dir){const sp=document.createElement('span');sp.innerHTML=html;
+ el.querySelectorAll('span').forEach(o=>{if(o.gone)return;o.gone=1;if(dir){const tr=getComputedStyle(o).transform;o.animate([{transform:tr==='none'?'translateY(0)':tr},{transform:`translateY(${-dir*105}%)`}],{duration:650,easing:EASE,fill:'both'}).onfinish=()=>o.remove()}else o.remove()});
+ el.appendChild(sp);if(dir)sp.animate([{transform:`translateY(${dir*105}%)`},{transform:'translateY(0)'}],{duration:650,easing:EASE,fill:'both'})}
+function setActive(i,dir){act=i;const f=F[i];swap($('.t'),f.t,dir);swap($('.s'),`${f.r} / ${f.k}`,dir);swap($('.y'),`${f.c} · ${f.v?'Veg':'Non-veg'}`,dir);updInd()}
+let H,ws,d,gap,W,act=0,s=0,T=0,tiltX=0,tiltY=0,mx=innerWidth/2,my=innerHeight/2,cx=-99,cy=-99,hov=-1,sx=null,dragged=false,isOpen=false,A=null,lastR=0,overBtn=false,last=performance.now(),state='';
+function measure(){const p=document.createElement('div');p.style.cssText='position:absolute;visibility:hidden;height:var(--H)';document.body.appendChild(p);H=p.offsetHeight;p.remove();ws=H*142/840;d=H*474/900;gap=H*.03;W=innerWidth;updInd()}
+const sm=x=>x*x*(3-2*x),B=r=>Math.abs(r)<1?(r+Math.sin(Math.PI*r)/Math.PI)/2:Math.sign(r)*.5;
+function openD(){if(isOpen)return;isOpen=true;const f=F[act],ih=innerHeight,L=W/2-d/2,Tp=ih/2-H/2;
+ D.innerHTML=`<button class="box lbl close">Close / बंद करें</button><div class="cvin big" style="${vars(f)}">${cover(f)}</div><div class="dt"><div class="ln"><span class="lbl">${f.c} · ${f.v?'Veg':'Non-veg'}</span></div><div class="ln"><h2>${f.t}</h2></div><div class="ln"><span class="lbl s">${f.r} / ${f.k}</span></div><div class="ln"><p class="syn">${f.s}</p></div><div class="ln"><div class="btns"><a class="box lbl cta" target="_blank" rel="noopener" href="${WA}${encodeURIComponent('Hello, I would like to order '+f.t)}">Order on WhatsApp</a><a class="box lbl" target="_blank" rel="noopener" href="${MAP}">Directions</a></div></div></div>`;
+ D.querySelector('.close').onclick=closeD;D.style.visibility='visible';
+ A=D.animate([{clipPath:`inset(${Tp}px ${W-L-d}px ${ih-Tp-H}px ${L}px round 4px)`},{clipPath:'inset(0px 0px 0px 0px round 0px)'}],{duration:900,easing:EASE,fill:'both'});A.onfinish=null;
+ D.querySelectorAll('.ln>*').forEach((e,i)=>e.animate([{transform:'translateY(110%)'},{transform:'translateY(0)'}],{duration:800,delay:450+i*90,easing:EASE,fill:'both'}))}
+function closeD(){if(!isOpen)return;isOpen=false;A.reverse();A.onfinish=()=>{if(!isOpen)D.style.visibility='hidden'}}
+function loop(t){const dt=Math.min(.05,(t-last)/1000);last=t;
+ s+=(T-s)*(1-Math.exp(-5.5*dt));
+ const cyS=innerHeight/2,on=!isOpen&&Math.abs(mx-W/2)<.55*d&&Math.abs(my-cyS)<.55*H&&Math.abs(T-s)<.3,k=1-Math.exp(-7*dt);
+ tiltY+=((on?(mx-W/2)/(.55*d)*9:(mx-W/2)/W*5)-tiltY)*k;tiltX+=((on?-(my-cyS)/(H/2)*6:0)-tiltX)*k;
+ for(let v=0;v<M;v++){const el=tapes[v],r=((v-s+M/2)%M+M)%M-M/2;rr[v]=r;
+  const x=r*(ws+gap)+(d-ws+1.6*gap)*B(r);
+  if(Math.abs(x)>W/2+1.5*d){el.style.visibility='hidden';continue}el.style.visibility='visible';
+  const o=sm(Math.max(0,1-Math.abs(r)));lift[v]+=(((hov===v&&Math.abs(r)>.5)?1:0)-lift[v])*(1-Math.exp(-12*dt));
+  el.style.transform=`translate3d(${x}px,${-o*.025*H-lift[v]*.045*H}px,${o*.2*H}px) rotateZ(${-4.5*o}deg) rotateX(${tiltX*o}deg) rotateY(${-90*o+tiltY*o}deg)`;
+  el.style.zIndex=Math.round(100-Math.abs(r)*4);el.style.setProperty('--ss',o*.55);el.style.setProperty('--sc',(1-o)*.5)}
+ const rT=Math.round(T);if(rT!==lastR){setActive(((rT%N)+N)%N,Math.sign(rT-lastR));lastR=rT}
+ play.style.transform=`scale(${isOpen?0:sm(Math.max(0,1-Math.abs(T-s)*3))})`;
+ cx+=(mx-cx)*(1-Math.exp(-16*dt));cy+=(my-cy)*(1-Math.exp(-16*dt));cur.style.transform=`translate3d(${cx}px,${cy}px,0)`;
+ const st=on?'open':overBtn?'btn':(hov>=0&&Math.abs(rr[hov])>.5)?'spine':'';if(st!==state){state=st;cur.className='cur '+st}
+ requestAnimationFrame(loop)}
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;overBtn=!!(e.target.closest&&e.target.closest('button,a'));if(sx!==null&&Math.abs(e.clientX-sx)>10)dragged=true});
+$('.shelf').addEventListener('pointerdown',e=>{sx=e.clientX;dragged=false});
+addEventListener('pointerup',e=>{if(sx!==null&&dragged&&!isOpen){const dx=e.clientX-sx;if(Math.abs(dx)>40)T+=dx<0?1:-1}sx=null});
+addEventListener('pointercancel',()=>sx=null);
+let wl=0;addEventListener('wheel',e=>{if(isOpen)return;const v=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY;if(Math.abs(v)<8||performance.now()-wl<380)return;wl=performance.now();T+=v>0?1:-1},{passive:true});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeD();else if(isOpen)return;else if(e.key==='ArrowRight')T++;else if(e.key==='ArrowLeft')T--;else if(e.key==='Enter'&&!e.target.closest('button,a'))openD()});
+$('.arr.l').onclick=()=>{if(!isOpen)T--};$('.arr.r').onclick=()=>{if(!isOpen)T++};play.onclick=openD;
+addEventListener('resize',measure);measure();setActive(0,0);document.fonts&&document.fonts.ready.then(updInd);requestAnimationFrame(loop);
+</script></body></html>
